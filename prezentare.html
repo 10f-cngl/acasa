@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Prezentare</title>
+	<link rel="style" href="style.css">
+	<style>
+		*{box-sizing:border-box;}
+		body{
+			
+			background-color:#ccffff;
+		
+			}
+			
+		footer{
+		background-color:#777;
+		text-align:center;
+		color:white;
+		padding:15px;
+		height:100px;}
+			
+		
+			
+		ul {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+			background-color:#4da6ff;}
+		
+		li{
+			float:right;
+			
+			}
+			
+			
+		.border-right{
+		border-right: 1px solid #0059b3;}
+		
+		.border-left{
+		border-left: 1px solid #0059b3;}
+		
+	
+		
+		li a{
+		overflow:hidden;
+		display:block;
+		color:white;
+		text-align:center;
+		padding:16px;
+		text-decoration:none;
+		font-size: 20px;
+		}
+		
+		li a:hover{
+		background-color:#0059b3;}
+		
+		.active{
+			background-color:#0059b3;
+			margin-right:30px;
+			border-right: 1px solid #0059b3;}
+			
+		.container-titlu {
+		float:left;
+		font-size:20px;
+		color:white;
+		margin: 15px 40px;
+		border-left:none;}
+		
+		
+		
+		
+		
+		
+		#hlogare{
+			font-size:25px;}
+		
+		.open-button{
+			background-color:red;
+			color:white;
+			padding:16px 20px;
+			border:none;
+			cursor:pointer;
+			position:fixed;
+			bottom:23px;
+			right:28px;
+			width:280px;
+		}
+			
+		.form-popup{
+			display: none;
+			position: fixed;
+			top: 75px;
+			right: 350px;
+			border: 3px solid #f1f1f1;
+			z-index: 9;
+		}
+		
+		.formular-container{
+			max-width:300px;
+			padding:10px;
+			background-color:white;
+			}
+		
+		.formular-container input[type=text], .psw  {
+			width:100%;
+			padding:15px;
+			margin:5px 0 22px 0;
+			border:none;
+			background:#f1f1f1;
+		}
+		
+		
+		
+		.formular-container input[type=text]:focus, .psw:focus {
+			background-color:#ddd;
+			outline:none;
+		}
+		
+		
+		
+		.formular-container .btnlogare , .btncancel{
+			background-color: #4da6ff;
+			color:white;
+			padding:14px 18px;
+			border:none;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+			opacity:0.8;
+		}
+		
+		.formular-container .btncancel {
+			background-color: #4da6ff;
+		}
+		
+		.formular-container .btnlogare:hover , .open-button:hover, .btncancel:hover {
+			background-color:#0059b3;
+		}
+		
+		.dropwdown{
+		overflow:hidden;
+		}
+		
+		.dropdown-content{
+		display:none;
+		position:absolute;
+		top:60px;
+		right:250px;
+		
+		background-color:#4da6ff;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index=1;
+		}
+		
+		.dropdown-content a {
+		float:none;
+		color:white;
+		padding:12px 16px;
+		text-decoration:none;
+		display:block;
+		text-align:center;}
+		
+		.dropdown-content a:hover {
+		background-color:#0059b3;
+		}
+		
+		.dropdown:hover .dropdown-content{
+		display:block;
+		}
+	</style>
+</head>
+
+<body>
+
+	
+	<ul>
+		
+		<li><a href="contact" class="border-left border-right" style="margin-right:30px;">Contact</a></li>
+		<li><a href="activitati" class="border-left" style="margin-right:0;">Activitati</a></li>
+		<div class="dropdown">
+		<li><a class="border-left" style="margin-right:0; text-decoration:none; color:white; cursor:pointer;">Publicatii  <i class="fa fa-caret-down"></i></a></li>
+			<div class="dropdown-content">
+			<a href="publicatii" >Revista 2016</a>
+			<a href="publicatii">Revista 2017</a>
+			<a href="publicatii">Revista 2018</a>
+			<a href="publicatii">Revista 2019</a>
+			</div>
+		</div>
+		
+		<li><a href="" class="border-left active" style="margin-right:0;">Prezentare</a></li>
+		<li><a style="cursor:pointer; text-decoration:none; color:white; width:80px;" class="border-left" onclick="deschideFormular()"><i class="fa fa-user"></i></a></li>
+		<li><a href="acasa" class="border-left" style="margin-right:0; text-decoration:none; color:white; width:80px;"><i class="fa fa-home"></i></a></li>
+		
+		
+			<li class="container-titlu">Centrul de Documentare si Informare CNGL Sibiu</li>
+		
+	
+	</ul>
+	<h1 style="background-color:#0059b3; color:white; text-align:center; padding:20px; margin-top:0; font-size:25px;">Despre CDI</h1>
+	
+	
+	
+	
+	<h1 style="color:black;font-size:80px" title="Numele meu" >Pe aceasta pagina, gasiti detalii despre CDI</h1>
+	
+	
+	
+	
+	
+	<div class="form-popup" id="formular">
+		<form action="html" class="formular-container">
+			<h1 id="hlogare">Logare</h1>
+			
+			<label for="email"><b>Nume de utilizator sau e-mail</b></label>
+			<input type="text" placeholder="Introdu e-mail sau username" name="email" required
+			oninvalid="this.setCustomValidity('Trebuie sa introduci e-mail sau username')"
+			oninput="this.setCustomValidity('')">
+			
+			<label for="psw"><b>Parola</b></label>
+			<input  class="psw" type="password" placeholder="Introdu parola" name="psw" required
+			oninvalid="this.setCustomValidity('Trebuie sa introduci parola')"
+			oninput="this.setCustomValidity('')">
+			
+			<button type="submit" class="btnlogare">Autentificare</button>
+			<br />
+			<input type="checkbox" name="remember" value="remember" checked="checked" style="width:15px; height:15px;margin-left:35px;margin-bottom:15px; margin-right:7px;"><span  style="font-size:20px;">Pastreaza-ma autentificat</span>
+			
+			<button type="button" class="btncancel" ><a href="creare" style="display:block; text-decoration:none; color:white; overflow:hidden;">Creare cont</a></button>
+			<button type="button" class="btncancel" onclick="inchideFormular()">Inchide</button>
+		</form>
+		
+	</div>
+	
+
+
+
+
+<script>
+	
+	
+	function deschideFormular() {
+		document.getElementById("formular").style.display="block";
+	}
+	
+	function inchideFormular() {
+		document.getElementById("formular").style.display="none";
+	}
+	</script>
+	
+
+</body>
+
+</html>
