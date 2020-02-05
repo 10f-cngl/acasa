@@ -2,7 +2,6 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>10F</title>
 	<link rel="style" href="style.css">
@@ -10,7 +9,7 @@
 		*{box-sizing:border-box;}
 		body{
 			
-			background-color:#ccffff;
+			background-color:white;
 		
 			}
 			
@@ -96,76 +95,54 @@
 		
 		.topnav {
   overflow: hidden;
-  background-color: #333;
-			
+  background-color: white;
+
+ 
 }
 
-.topnav a {
-  float: left;
+.topnav a , .titlu{
+  float: right;
   display: block;
-  color: #f2f2f2;
+
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+    color:black;
+}
+
+.titlu {
+float:left;
+font-size:25px;
+}
+
+.titlu:hover{
+cursor:pointer;
+border-bottom: 3px solid #3385ff;
+color:#3385ff;
+margin-top:20px;
 }
 
 .active {
-  background-color: #4CAF50;
+  border-bottom: 3px solid #3385ff;
   color: white;
+  index=10;
 }
 
 .topnav .icon {
   display: none;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
+
+  color:#3385ff;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -219,21 +196,24 @@
 	
 	
 	<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
- <a href="#imagini">Imagini</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <a href="#news"><b>PERSONAL</b></a>
+  <a href="#news"><b>CASINO ROYALE</b></a>
+  <a href="#contact"><b>LOGARE</b></a>
+ <a href="#imagini"><b>IMAGINI</b></a>
+  <a href="#about"><b>PREZENTARE</b></a>
+  
+   <a href="#home" class="active"><b>ACASA</b></a>
+   <h1 class="titlu">10 F - CNGL - diriginte Pavelescu Corina</h1>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
 	<h1 style="background-color:#0059b3; color:white; text-align:center; padding:20px; margin-top:0; font-size:25px;">Acasa</h1>
 	
 	
@@ -313,31 +293,6 @@
 		<br>
 		<br>
 		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-	
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 		<br><br>
 		<br>
 		<br>
@@ -453,12 +408,15 @@
 		<br>
 		<br>
 		
+		<br>
+		<br>
+		<br>
 		<br>
 		<br>
 		<br>
 	 
 	<script>
-	
+
 	function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
