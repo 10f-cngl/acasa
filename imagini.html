@@ -303,7 +303,22 @@ margin-top:20px;
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 	
-	<script>
+<script>
+		function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+	function deschideFormular() {
+		document.getElementById("formular").style.display="block";
+	}
+	
+	function inchideFormular() {
+		document.getElementById("formular").style.display="none";
+	}
 	var slideIndex = 1;
 showSlides(slideIndex);
 
